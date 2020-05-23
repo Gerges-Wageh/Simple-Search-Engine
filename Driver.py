@@ -21,7 +21,8 @@ class Main(QMainWindow , MainUI):
         self.setupUi(self)
         self.setWindowIcon(QtGui.QIcon("icon.png"))
         self.tabWidget.tabBar().setVisible(False)
-        self.groupBox.setVisible(False)
+        self.progressBar.setVisible(False)
+        self.label_2.setVisible(False)
         self.tabWidget.setCurrentIndex(0)
         self.progressBar.setValue(0)
         self.progressBar.setFormat('')
@@ -30,11 +31,12 @@ class Main(QMainWindow , MainUI):
 
     def upload(self):
         try:
+            self.label_2.setVisible(True)
             names = QFileDialog.getOpenFileNames()
             self.main_path = "/".join(names[0][0].split('/')[:-1])
             n = len(names[0])
             self.progressBar.setMaximum(n)
-            self.groupBox.setVisible(True)
+            self.progressBar.setVisible(True)
             for i in range(n):
                 with open(names[0][i], mode='r', encoding='utf-8') as f:
                     content = f.read()

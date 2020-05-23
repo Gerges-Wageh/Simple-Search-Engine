@@ -28,7 +28,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -58,53 +58,6 @@ border-radius: 20px;</string>
        <string>                 Search Engine Simulator</string>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>420</y>
-        <width>511</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="title">
-       <string>indexing</string>
-      </property>
-      <widget class="QProgressBar" name="progressBar">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>491</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QProgressBar{
-    border: 2px solid grey;
-    border-radius: 5px;
-    text-align: center
-}
-
-QProgressBar::chunk {
-    background-color: rgb(77, 77, 77);
-    width: 10px;
-    margin: 1px;
-}</string>
-       </property>
-       <property name="value">
-        <number>24</number>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
@@ -127,6 +80,53 @@ border-radius: 20px;</string>
       </property>
       <property name="text">
        <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>440</y>
+        <width>491</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center
+}
+
+QProgressBar::chunk {
+    background-color: rgb(77, 77, 77);
+    width: 10px;
+    margin: 1px;
+}</string>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+      <property name="format">
+       <string> </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>420</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>indexing ...</string>
       </property>
      </widget>
     </widget>
