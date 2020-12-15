@@ -8,14 +8,15 @@ import sys
 from Trie import *
 import os
 
-MainUI,_ = loadUiType('Design.ui')
+MainUI, _ = loadUiType('Design.ui')
 
 T = Trie()
 
-class Main(QMainWindow , MainUI):
+
+class Main(QMainWindow, MainUI):
     main_path = ''
 
-    def __init__(self,parent=None):
+    def __init__(self, parent=None):
         super(Main, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
@@ -43,7 +44,7 @@ class Main(QMainWindow , MainUI):
                     name = os.path.basename(f.name)
                 for word in content.split():
                     T.insert(word, name)
-                self.progressBar.setValue(i+1)
+                self.progressBar.setValue(i + 1)
             self.tabWidget.setCurrentIndex(1)
         except:
             QMessageBox.information(self, "Warning", "Something went wrong please try again !")
@@ -71,10 +72,8 @@ class Main(QMainWindow , MainUI):
             QMessageBox.information(self, "Warning", "Please enter a word to start search !")
 
 
-
-
 def main():
-    app=QApplication(sys.argv)
+    app = QApplication(sys.argv)
     window = Main()
     window.setWindowTitle('Search Engine')
     window.show()
